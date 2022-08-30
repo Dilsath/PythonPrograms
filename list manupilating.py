@@ -28,7 +28,10 @@ def modify():
     if(a==2):
         a=int(input("enter the element that to be modified = "))
         b=int(input("enter the new element = "))
-        user=[x if x != a else b for x in user]
+        if(a in user):
+            x=user.index(a)
+            user.pop(x)
+            user.insert(x,b)
     else:
         print("invalid input")    
             
